@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalBillActivity"
+    android:background="#ADD8E6">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="345dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="SAMPLE MONTHLY BILL STATEMENT"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Algoma Power Inc. - Main"
+        android:textColor="#800080"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView3"
+        android:text="Account Number:"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView4"
+        android:text="Meter Number:"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPutAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView3"
+        android:text="0000000000"
+        android:textColor="#0000A0" />
+
+    <TextView
+        android:id="@+id/txtPutMeterNumber"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:text="0000000000"
+        android:textColor="#0000A0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/txtPutMeterNumber"
+        android:layout_marginTop="125dp"
+        android:text="Your Electricity Charges"
+        android:textColor="#800080"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView7"
+        android:text="Electricity"
+        android:textColor="#0000A0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView10"
+        android:text="Off-Peak @6.5 cKWh" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView11"
+        android:text="Mid-Peak @9.4 cKWh" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView12"
+        android:text="On-Peak @13.2 cKWh" />
+
+    <TextView
+        android:id="@+id/txtPutOffPeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView10"
+        android:layout_marginEnd="119dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtPutMidPeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPutOffPeak"
+        android:layout_below="@+id/textView11"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtPutOnPeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPutOffPeak"
+        android:layout_below="@+id/textView12"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtDelivery"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textView13"
+        android:text="Delivery"
+        android:textColor="#0000A0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPutDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPutOffPeak"
+        android:layout_below="@+id/txtPutOnPeak"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtTotalElectricityCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/txtDelivery"
+        android:layout_marginBottom="209dp"
+        android:text="Total Electricity Charges"
+        android:textColor="#800080"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtPutTotalElectricityCharge"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/txtTotalElectricityCharge"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_marginEnd="70dp"-->
+        <!--android:text="TextView" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtHst"-->
+        <!--android:layout_width="96dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBelow="@+id/txtTotalElectricityCharge"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/textView2"-->
+        <!--android:layout_below="@+id/txtTotalElectricityCharge"-->
+        <!--android:text="HST"-->
+        <!--android:textColor="#0000A0"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+</RelativeLayout>

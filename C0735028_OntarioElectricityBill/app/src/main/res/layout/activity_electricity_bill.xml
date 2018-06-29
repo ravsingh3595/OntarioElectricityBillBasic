@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElectricityBillActivity">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="146dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center_vertical"
+        android:text="Customer Name"
+        android:textColor="#0000A0"
+        android:textSize="18sp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/txtName"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtAccountNumber"
+        android:layout_width="146dp"
+        android:layout_height="46dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtName"
+        android:gravity="center_vertical"
+        android:text="Account Number"
+        android:textColor="#0000A0"
+        android:textSize="18sp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edtAccountNumber"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtName"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+
+    <TextView
+        android:id="@+id/txtMeterNumber"
+        android:layout_width="146dp"
+        android:layout_height="46dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtAccountNumber"
+        android:gravity="center_vertical"
+        android:text="Meter Number"
+        android:textColor="#0000A0"
+        android:textSize="18sp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edtMeterNumber"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtAccountNumber"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtMeterNumber"
+        android:text="Step1:"
+        android:textColor="#800080"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtUsage"
+        android:layout_width="336dp"
+        android:layout_height="39dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtStep1"
+        android:gravity="center_vertical"
+        android:text="Enter your monthly electricity usage"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtMonthlyUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtUsage"
+        android:gravity="center_vertical"
+        android:text="Enter your monthly usage:"
+        android:textColor="#0000A0" />
+
+    <EditText
+        android:id="@+id/edtMonthlyUsage"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtUsage"
+        android:layout_marginEnd="106dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:inputType="numberDecimal"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/txtKWH"
+        android:layout_width="56dp"
+        android:layout_height="31dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtUsage"
+        android:layout_marginEnd="38dp"
+        android:text="kWh"
+        android:textColor="#0000A0"
+        android:gravity="center_vertical"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtPricingPlan"
+        android:layout_width="169dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtMonthlyUsage"
+        android:gravity="center_vertical"
+        android:text="Select your pricing plan:*"
+        android:textColor="#0000A0" />
+
+    <RadioGroup
+        android:id="@+id/rgPlanSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtMonthlyUsage"
+        android:layout_below="@+id/txtMonthlyUsage"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbTimeOfUsePricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Time-of-use-Pricing"
+            android:textSize="12sp"
+            android:textColor="#0000A0"/>
+
+        <RadioButton
+            android:id="@+id/rbTieredPricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tiered Pricing"
+            android:textSize="12sp"
+            android:textColor="#0000A0"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearConsumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtPricingPlan"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtAdjustConsumption"
+            android:layout_width="169dp"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/txtName"
+            android:text="Adjust your Consumption: (optional)(Enter In Percentage)"
+            android:textColor="#0000A0"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtOffPeak"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:hint="Off-Peak: Percentage"
+                android:textSize="12sp"
+                android:inputType="numberDecimal"/>
+            <EditText
+                android:id="@+id/edtMidPeak"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:hint="Mid-Peak:Percentage"
+                android:textSize="12sp"
+                android:inputType="numberDecimal"/>
+            <EditText
+                android:id="@+id/edtOnPeak"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:hint="On-Peak Percentage"
+                android:textSize="12sp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtStep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/linearConsumption"
+        android:text="Step2:"
+        android:textColor="#800080"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtOESP"
+        android:layout_marginTop="8dp"
+        android:layout_width="336dp"
+        android:layout_height="39dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtStep2"
+        android:gravity="center_vertical"
+        android:text="Enter your Ontario Electricity Support Program (OESP) credit amount (if applicable)"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtOESPCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtOESP"
+        android:gravity="center_vertical"
+        android:text="Your OESP monthly credit(eg:30.00):$"
+        android:textColor="#0000A0" />
+
+    <EditText
+        android:id="@+id/edtOESPCredit"
+        android:layout_width="81dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtOESP"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:inputType="numberDecimal"
+        android:textSize="8sp" />
+    <TextView
+        android:id="@+id/txtOptional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/edtOESPCredit"
+        android:text="Optional:"
+        android:textColor="#800080"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtContractRetailer"
+        android:layout_marginTop="8dp"
+        android:layout_width="336dp"
+        android:layout_height="39dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtOptional"
+        android:gravity="center_vertical"
+        android:text="See how your bill might look on a contract with the energy retailer"
+        android:textColor="#800080"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/txtContractRate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtContractRetailer"
+        android:gravity="center_vertical"
+        android:text="Enter the Retail Contract Price:"
+        android:textColor="#0000A0" />
+
+    <EditText
+        android:id="@+id/edtContractRate"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/txtContractRate"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/txtKWH"
+        android:ems="10"
+        android:gravity="bottom"
+        android:inputType="numberDecimal"
+        android:textSize="8sp" />
+    <TextView
+        android:id="@+id/txtCKWH"
+        android:layout_width="56dp"
+        android:layout_height="31dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtContractRetailer"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="5dp"
+        android:text="kWh"
+        android:textColor="#0000A0"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"
+        android:layout_below="@+id/txtContractRate"/>
+
+</RelativeLayout>
+</ScrollView>
